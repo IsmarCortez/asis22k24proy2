@@ -396,3 +396,15 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Ignorar todo el contenido dentro de bin/Debug
+asis22k24proy2/Codigo/Componentes/Seguridad/EjecucionSeguridad/EjecucionSeguridad/bin/Debug/**
+
+# Excepciones para las carpetas (vacías) bin/Debug y subdirectorios
+!asis22k24proy2/Codigo/Componentes/Seguridad/EjecucionSeguridad/EjecucionSeguridad/bin/
+!asis22k24proy2/Codigo/Componentes/Seguridad/EjecucionSeguridad/EjecucionSeguridad/bin/Debug/
+
+# Permitir contenido solo en Ayuda_Seguridad dentro de bin/Debug
+!asis22k24proy2/Codigo/Componentes/Seguridad/EjecucionSeguridad/EjecucionSeguridad/bin/Debug/Ayuda_Seguridad/
+!asis22k24proy2/Codigo/Componentes/Seguridad/EjecucionSeguridad/EjecucionSeguridad/bin/Debug/Ayuda_Seguridad/**
+
