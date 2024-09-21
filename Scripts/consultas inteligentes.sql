@@ -7,3 +7,5 @@ create table if not exists tbl_consultaInteligente (
     consulta_SQLE varchar(100) not null,
     consulta_estatus int(1) not null
 );
+
+Alter table tbl_consultaInteligente modify consulta_SQLE varchar(200) not null

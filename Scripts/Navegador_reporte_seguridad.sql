@@ -557,58 +557,51 @@ INSERT INTO `reserva` (`id_reserva`, `nombre_cliente`, `monto_compra`, `sede_com
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_aplicaciones` (
-	pk_id_aplicacion INT NOT NULL AUTO_INCREMENT,
-    nombre_aplicacion VARCHAR(50) NOT NULL DEFAULT '0',
-    descripcion_aplicacion VARCHAR(150) NOT NULL DEFAULT '0',
+	Pk_id_aplicacion INT NOT NULL AUTO_INCREMENT,
+    nombre_aplicacion VARCHAR(50) NOT NULL,
+    descripcion_aplicacion VARCHAR(150) NOT NULL,
     estado_aplicacion TINYINT DEFAULT 0,
-	--
-	idregistro int NULL,
-	ruta varchar(500) NULL,
-	nombre_archivo varchar(45) NULL,
-	aplicacion varchar(45) NULL,
-	estado varchar(45) NULL,
-    primary key (`pk_id_aplicacion`)
+    primary key (`Pk_id_aplicacion`)
 );
 
 --
 -- Volcado de datos para la tabla `tbl_aplicaciones`
 --
 
-INSERT INTO `tbl_aplicaciones` (`pk_id_aplicacion`, `nombre_aplicacion`, `descripcion_aplicacion`, `estado_aplicacion`, `idregistro`, `ruta`, `nombre_archivo`, `aplicacion`, `estado`) VALUES
-(1000, 'MDI SEGURIDAD', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1001, 'Mant. Usuario', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1002, 'Mant. Aplicación', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1003, 'Mant. Modulo', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1004, 'Mant. Perfil', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1101, 'Asign. Modulo Aplicacion', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1102, 'Asign. Aplicacion Perfil', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1103, 'Asign. Perfil Usuario', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1201, 'Pcs. Cambio Contraseña', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(1301, 'Pcs. BITACORA', 'PARA SEGURIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(2000, 'MDI LOGISTICA', 'PARA LOGISTICA', 1, NULL, NULL, NULL, NULL, NULL),
-(3000, 'MDI COMPRAS Y VENTAS', 'PARA COMPRAS Y VENTAS', 1, NULL, NULL, NULL, NULL, NULL),
-(5000, 'MDI PRODUCCIÓN', 'PARA PRODUCCIÓN', 1, NULL, NULL, NULL, NULL, NULL),
-(6000, 'MDI NOMINAS', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6001, 'Mant. Trabajadores', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6002, 'Mant. Puestos de Trabajo', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6003, 'Mant. Departamentos', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6004, 'Mant. Contratos', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6005, 'Mant. Percepciones', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6006, 'Mant. Horas Extras', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6007, 'Mant. Faltas', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6101, 'Asgn. Puesto - Depto.', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6102, 'Asgn. Puesto - Trabajador', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6103, 'Asgn. Contrato Trabajador', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6104, 'Asgn. Prestaciones Contrato', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6105, 'Asgn. Prestaciones Individual', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6106, 'Prcs. Nomina', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6201, 'Rpt. Planillas', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6202, 'Rpt. Contratos', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6203, 'Rpt. Trabajadores', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(6301, 'ACCESO SEGURIDAD', 'PARA NOMINAS', 1, NULL, NULL, NULL, NULL, NULL),
-(7000, 'MDI BANCOS', 'PARA BANCOS', 1, NULL, NULL, NULL, NULL, NULL),
-(8000, 'MDI CONTRABILIDAD', 'PARA CONTRABILIDAD', 1, NULL, NULL, NULL, NULL, NULL),
-(8001, '0', '0', 0, 1, 'ReporteVentas.rpt', 'Compras', '3000', 'Visible');
+INSERT INTO `tbl_aplicaciones` VALUES
+('1000', 'MDI SEGURIDAD', 'PARA SEGURIDAD', '1'),
+('1001', 'Mant. Usuario', 'PARA SEGURIDAD', '1'),
+('1002', 'Mant. Aplicación', 'PARA SEGURIDAD', '1'),
+('1003', 'Mant. Modulo', 'PARA SEGURIDAD', '1'),
+('1004', 'Mant. Perfil', 'PARA SEGURIDAD', '1'),
+('1101', 'Asign. Modulo Aplicacion', 'PARA SEGURIDAD', '1'),
+('1102', 'Asign. Aplicacion Perfil', 'PARA SEGURIDAD', '1'),
+('1103', 'Asign. Perfil Usuario', 'PARA SEGURIDAD', '1'),
+('1201', 'Pcs. Cambio Contraseña', 'PARA SEGURIDAD', '1'),
+('1301', 'Pcs. BITACORA', 'PARA SEGURIDAD', '1'),
+('2000', 'MDI LOGISTICA', 'PARA LOGISTICA', '1'),
+('3000', 'MDI COMPRAS Y VENTAS', 'PARA COMPRAS Y VENTAS', '1'),
+('5000', 'MDI PRODUCCIÓN', 'PARA PRODUCCIÓN', '1'),
+('6000', 'MDI NOMINAS', 'PARA NOMINAS', '1'),
+('6001', 'Mant. Trabajadores', 'PARA NOMINAS', '1'),
+('6002', 'Mant. Puestos de Trabajo', 'PARA NOMINAS', '1'),
+('6003', 'Mant. Departamentos', 'PARA NOMINAS', '1'),
+('6004', 'Mant. Contratos', 'PARA NOMINAS', '1'),
+('6005', 'Mant. Percepciones', 'PARA NOMINAS', '1'),
+('6006', 'Mant. Horas Extras', 'PARA NOMINAS', '1'),
+('6007', 'Mant. Faltas', 'PARA NOMINAS', '1'),
+('6101', 'Asgn. Puesto - Depto.', 'PARA NOMINAS', '1'),
+('6102', 'Asgn. Puesto - Trabajador', 'PARA NOMINAS', '1'),
+('6103', 'Asgn. Contrato Trabajador', 'PARA NOMINAS', '1'),
+('6104', 'Asgn. Prestaciones Contrato', 'PARA NOMINAS', '1'),
+('6105', 'Asgn. Prestaciones Individual', 'PARA NOMINAS', '1'),
+('6106', 'Prcs. Nomina', 'PARA NOMINAS', '1'),
+('6201', 'Rpt. Planillas', 'PARA NOMINAS', '1'),
+('6202', 'Rpt. Contratos', 'PARA NOMINAS', '1'),
+('6203', 'Rpt. Trabajadores', 'PARA NOMINAS', '1'),
+('6301', 'ACCESO SEGURIDAD', 'PARA NOMINAS', '1'),
+('7000', 'MDI BANCOS', 'PARA BANCOS', '1'),
+('8000', 'MDI CONTRABILIDAD', 'PARA CONTRABILIDAD', '1');
 
 -- --------------------------------------------------------
 
@@ -792,10 +785,11 @@ INSERT INTO `tbl_bitacora` (`Pk_id_bitacora`, `Fk_id_usuario`, `Fk_id_aplicacion
 --
 
 CREATE TABLE `tbl_modulos` (
-  `Pk_id_modulos` int(11) NOT NULL,
-  `nombre_modulo` varchar(50) NOT NULL,
-  `descripcion_modulo` varchar(150) NOT NULL,
-  `estado_modulo` tinyint(4) DEFAULT 0
+	Pk_id_modulos INT NOT NULL,
+    nombre_modulo VARCHAR(50) NOT NULL,
+    descripcion_modulo VARCHAR(150) NOT NULL,
+    estado_modulo TINYINT DEFAULT 0,
+    primary key (`Pk_id_modulos`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -812,6 +806,23 @@ INSERT INTO `tbl_modulos` (`Pk_id_modulos`, `nombre_modulo`, `descripcion_modulo
 (8000, 'CONTABILIDAD', 'Contabilidad', 1);
 
 -- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_perfiles`
+--
+
+CREATE TABLE tbl_regreporteria (
+  idregistro int NOT NULL AUTO_INCREMENT,
+  ruta varchar(500) NOT NULL,
+  nombre_archivo varchar(45) NOT NULL,
+  aplicacion varchar(45) NOT NULL,
+  estado varchar(45) NOT NULL,
+  Fk_id_aplicacion INT NOT NULL,
+  Fk_id_modulos INT NOT NULL,
+  PRIMARY KEY (idregistro),
+  FOREIGN KEY (`Fk_id_modulos`) REFERENCES `Tbl_modulos` (`Pk_id_modulos`),
+  FOREIGN KEY (`Fk_id_aplicacion`) REFERENCES `Tbl_aplicaciones` (`Pk_id_aplicacion`)
+) ENGINE=InnoDB;
 
 --
 -- Estructura de tabla para la tabla `tbl_perfiles`
@@ -1251,28 +1262,11 @@ ALTER TABLE `reserva`
   ADD PRIMARY KEY (`id_reserva`);
 
 --
--- Indices de la tabla `tbl_aplicaciones`
---
-ALTER TABLE `tbl_aplicaciones`
-  ADD PRIMARY KEY (`pk_id_aplicacion`);
-
---
 -- Indices de la tabla `tbl_asignaciones_perfils_usuario`
 --
 ALTER TABLE `tbl_asignaciones_perfils_usuario`
   ADD PRIMARY KEY (`Fk_id_usuario`,`Fk_id_perfil`),
   ADD KEY `Fk_id_perfil` (`Fk_id_perfil`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `tbl_aplicaciones`
---
-ALTER TABLE `tbl_aplicaciones`
-  MODIFY `pk_id_aplicacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8002;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
