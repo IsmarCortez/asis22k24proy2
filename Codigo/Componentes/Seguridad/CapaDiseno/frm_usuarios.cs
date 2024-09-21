@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CapaLogica;
 using System.Data.Odbc;
 using System.Security.Cryptography;
+using System.IO; // Necesario para Directory, File, Path y SearchOption
+using System.Windows.Forms; // Necesario para MessageBox y Help
 
 /*---------------------------Creador: Diego Gomez------------------------------*/
 namespace CapaDiseno
@@ -227,11 +229,61 @@ namespace CapaDiseno
         {
 
         }
-
+        //********************** KATERYN DE LEON y Gabriela Suc ******************************
         private void Btn_ayuda_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "C:\\Ayuda_Seguridad\\" + "CreacionUsuario.chm", "Creacion_Usuario.html");
+            //Help.ShowHelp(this, "C:\\Ayuda_Seguridad\\" + "CreacionUsuario.chm", "Creacion_Usuario.html");
+            // Define el directorio base desde donde comenzar la búsqueda
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory; // Usando el directorio base del ejecutable
+
+            // Imprime la ruta base para verificar
+            MessageBox.Show("Ruta base: " + baseDirectory);
+
+            // Busca el archivo .chm en el directorio base y sus subdirectorios
+            string pathAyuda = FindFileInDirectory(baseDirectory, "Ayuda_Seguridad", "ayudaUsuarios.chm");
+
+            // Imprimir la ruta generada para verificar
+            MessageBox.Show("Ruta de ayuda: " + pathAyuda);
+
+            // Verifica si el archivo existe antes de intentar abrirlo
+            if (!string.IsNullOrEmpty(pathAyuda))
+            {
+                MessageBox.Show("El archivo sí está.");
+                // Abre el archivo de ayuda .chm en la sección especificada
+                Help.ShowHelp(this, pathAyuda, "Asignacion_Aplicaciones_Perfiles.html");
+            }
+            else
+            {
+                // Si el archivo no existe, muestra un mensaje de error
+                MessageBox.Show("El archivo de ayuda no se encontró.");
+            }
         }
+        //********************** KATERYN DE LEON y Gabriela Suc ******************************
+        private string FindFileInDirectory(string rootDirectory, string folderName, string fileName)
+        {
+            try
+            {
+                // Imprime la ruta raíz para verificar
+                MessageBox.Show("Buscando en: " + rootDirectory);
+
+                // Busca la carpeta y el archivo
+                foreach (string directory in Directory.GetDirectories(rootDirectory, folderName, SearchOption.AllDirectories))
+                {
+                    MessageBox.Show("Carpeta encontrada: " + directory); // Imprime las carpetas encontradas
+                    string filePath = Path.Combine(directory, fileName);
+                    if (File.Exists(filePath))
+                    {
+                        return filePath; // Devuelve la primera coincidencia encontrada
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el archivo: " + ex.Message);
+            }
+            return null; // No se encontró el archivo
+        }
+        //************************************** Fin KATERYN DE LEON y Gabriela Suc *********************************************************************
 
         private void txt_id_TextChanged(object sender, EventArgs e)
         {

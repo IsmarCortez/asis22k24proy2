@@ -38,6 +38,7 @@
             this.Btn_buscar = new System.Windows.Forms.Button();
             this.Btn_actualizar = new System.Windows.Forms.Button();
             this.Dtp_hora = new System.Windows.Forms.DateTimePicker();
+            this.btn_ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_bitacora)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             this.Txt_dato.Location = new System.Drawing.Point(472, 46);
             this.Txt_dato.Name = "Txt_dato";
-            this.Txt_dato.Size = new System.Drawing.Size(229, 27);
+            this.Txt_dato.Size = new System.Drawing.Size(229, 35);
             this.Txt_dato.TabIndex = 2;
             // 
             // Cbo_columna
@@ -67,7 +68,7 @@
             this.Cbo_columna.FormattingEnabled = true;
             this.Cbo_columna.Location = new System.Drawing.Point(155, 46);
             this.Cbo_columna.Name = "Cbo_columna";
-            this.Cbo_columna.Size = new System.Drawing.Size(226, 29);
+            this.Cbo_columna.Size = new System.Drawing.Size(226, 35);
             this.Cbo_columna.TabIndex = 3;
             this.Cbo_columna.SelectedIndexChanged += new System.EventHandler(this.Cbo_columna_SelectedIndexChanged);
             // 
@@ -76,7 +77,7 @@
             this.Lbl_columna.AutoSize = true;
             this.Lbl_columna.Location = new System.Drawing.Point(160, 20);
             this.Lbl_columna.Name = "Lbl_columna";
-            this.Lbl_columna.Size = new System.Drawing.Size(215, 21);
+            this.Lbl_columna.Size = new System.Drawing.Size(298, 27);
             this.Lbl_columna.TabIndex = 5;
             this.Lbl_columna.Text = "Selecciona una columna";
             // 
@@ -85,7 +86,7 @@
             this.Lbl_dato.AutoSize = true;
             this.Lbl_dato.Location = new System.Drawing.Point(510, 20);
             this.Lbl_dato.Name = "Lbl_dato";
-            this.Lbl_dato.Size = new System.Drawing.Size(143, 21);
+            this.Lbl_dato.Size = new System.Drawing.Size(189, 27);
             this.Lbl_dato.TabIndex = 6;
             this.Lbl_dato.Text = "Ingresa un dato";
             // 
@@ -93,7 +94,7 @@
             // 
             this.Dtp_dato.Location = new System.Drawing.Point(455, 46);
             this.Dtp_dato.Name = "Dtp_dato";
-            this.Dtp_dato.Size = new System.Drawing.Size(258, 27);
+            this.Dtp_dato.Size = new System.Drawing.Size(258, 35);
             this.Dtp_dato.TabIndex = 7;
             this.Dtp_dato.Visible = false;
             // 
@@ -143,15 +144,29 @@
             // 
             this.Dtp_hora.Location = new System.Drawing.Point(455, 46);
             this.Dtp_hora.Name = "Dtp_hora";
-            this.Dtp_hora.Size = new System.Drawing.Size(258, 27);
+            this.Dtp_hora.Size = new System.Drawing.Size(258, 35);
             this.Dtp_hora.TabIndex = 9;
             this.Dtp_hora.Visible = false;
             // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.Image = global::CapaDiseno.Properties.Resources.icons8_ayuda_30;
+            this.btn_ayuda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ayuda.Location = new System.Drawing.Point(948, 33);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(86, 36);
+            this.btn_ayuda.TabIndex = 257;
+            this.btn_ayuda.Text = "Ayuda";
+            this.btn_ayuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ayuda.UseVisualStyleBackColor = true;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
             // frm_mostrar_bitacora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 596);
+            this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.Dtp_hora);
             this.Controls.Add(this.Btn_borrarfiltros);
             this.Controls.Add(this.Dtp_dato);
@@ -185,5 +200,6 @@
         private System.Windows.Forms.DateTimePicker Dtp_dato;
         private System.Windows.Forms.Button Btn_borrarfiltros;
         private System.Windows.Forms.DateTimePicker Dtp_hora;
+        private System.Windows.Forms.Button btn_ayuda;
     }
 }

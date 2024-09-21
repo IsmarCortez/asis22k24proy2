@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
- 
+
+using System.IO; // Necesario para Directory, File, Path y SearchOption
+using System.Windows.Forms; // Necesario para MessageBox y Help
+
 
 namespace CapaDiseno
 {
@@ -285,6 +288,64 @@ namespace CapaDiseno
         {
             this.Close();
         }
+        //**********************KATERYN DE LEON ******************************
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            // Help.ShowHelp(this, "C:\\Ayuda_Seguridad\\" + "CreacionUsuario.chm", "Creacion_Usuario.html");
+
+            // Define el directorio base desde donde comenzar la búsqueda
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory; // Usando el directorio base del ejecutable
+
+            // Imprime la ruta base para verificar
+            MessageBox.Show("Ruta base: " + baseDirectory);
+
+            // Busca el archivo en el directorio base y sus subdirectorios
+            string pathAyuda = FindFileInDirectory(baseDirectory, "Ayuda_Seguridad", "frmAsignancionModuloAplicaciones.chm");
+
+            // Imprimir la ruta generada para verificar
+            MessageBox.Show("Ruta de ayuda: " + pathAyuda);
+
+            // Verifica si el archivo existe antes de intentar abrirlo
+            if (!string.IsNullOrEmpty(pathAyuda))
+            {
+                MessageBox.Show("El archivo sí está.");
+                // Abre el archivo de ayuda .chm
+                Help.ShowHelp(this, pathAyuda);
+            }
+            else
+            {
+                // Si el archivo no existe, muestra un mensaje de error
+                MessageBox.Show("El archivo de ayuda no se encontró.");
+            }
+        }
+
+        private string FindFileInDirectory(string rootDirectory, string folderName, string fileName)
+        {
+            try
+            {
+                // Imprime la ruta raíz para verificar
+                MessageBox.Show("Buscando en: " + rootDirectory);
+
+                // Busca la carpeta y el archivo
+                foreach (string directory in Directory.GetDirectories(rootDirectory, folderName, SearchOption.AllDirectories))
+                {
+                    MessageBox.Show("Carpeta encontrada: " + directory); // Imprime las carpetas encontradas
+                    string filePath = Path.Combine(directory, fileName);
+                    if (File.Exists(filePath))
+                    {
+                        return filePath; // Devuelve la primera coincidencia encontrada
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el archivo: " + ex.Message);
+            }
+            return null; // No se encontró el archivo
+        }
+
+        //****************************************************************************
+
     }
 
     /***************************************************************************************************/

@@ -199,7 +199,7 @@
             this.cbo_modulos.Location = new System.Drawing.Point(221, 50);
             this.cbo_modulos.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_modulos.Name = "cbo_modulos";
-            this.cbo_modulos.Size = new System.Drawing.Size(160, 29);
+            this.cbo_modulos.Size = new System.Drawing.Size(160, 35);
             this.cbo_modulos.TabIndex = 14;
             this.cbo_modulos.SelectedIndexChanged += new System.EventHandler(this.Cbo_modulos_SelectedIndexChanged);
             // 
@@ -209,7 +209,7 @@
             this.lbl_modulo.Location = new System.Drawing.Point(262, 30);
             this.lbl_modulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_modulo.Name = "lbl_modulo";
-            this.lbl_modulo.Size = new System.Drawing.Size(81, 21);
+            this.lbl_modulo.Size = new System.Drawing.Size(110, 27);
             this.lbl_modulo.TabIndex = 13;
             this.lbl_modulo.Text = "Modulos";
             // 
@@ -219,7 +219,7 @@
             this.cbo_perfiles.Location = new System.Drawing.Point(24, 51);
             this.cbo_perfiles.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_perfiles.Name = "cbo_perfiles";
-            this.cbo_perfiles.Size = new System.Drawing.Size(160, 29);
+            this.cbo_perfiles.Size = new System.Drawing.Size(160, 35);
             this.cbo_perfiles.TabIndex = 0;
             this.cbo_perfiles.SelectedIndexChanged += new System.EventHandler(this.cbo_perfiles_SelectedIndexChanged);
             // 
@@ -229,7 +229,7 @@
             this.cbo_aplicaciones.Location = new System.Drawing.Point(418, 50);
             this.cbo_aplicaciones.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_aplicaciones.Name = "cbo_aplicaciones";
-            this.cbo_aplicaciones.Size = new System.Drawing.Size(160, 29);
+            this.cbo_aplicaciones.Size = new System.Drawing.Size(160, 35);
             this.cbo_aplicaciones.TabIndex = 1;
             this.cbo_aplicaciones.SelectedIndexChanged += new System.EventHandler(this.cbo_aplicaciones_SelectedIndexChanged);
             // 
@@ -250,7 +250,7 @@
             this.label1.Location = new System.Drawing.Point(70, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 21);
+            this.label1.Size = new System.Drawing.Size(91, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = "Perfiles";
             // 
@@ -260,7 +260,7 @@
             this.label2.Location = new System.Drawing.Point(442, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 21);
+            this.label2.Size = new System.Drawing.Size(162, 27);
             this.label2.TabIndex = 3;
             this.label2.Text = "Aplicaciones";
             // 
@@ -283,9 +283,10 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(95, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(564, 33);
+            this.label3.Size = new System.Drawing.Size(782, 44);
             this.label3.TabIndex = 253;
             this.label3.Text = "ASIGNACION DE APLICACIONES A PERFILES";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btn_buscar
             // 
@@ -301,12 +302,12 @@
             // 
             this.txt_buscar.Location = new System.Drawing.Point(760, 119);
             this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(100, 27);
+            this.txt_buscar.Size = new System.Drawing.Size(100, 35);
             this.txt_buscar.TabIndex = 255;
             // 
             // frm_asignacion_aplicaciones_perfiles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 410);
             this.Controls.Add(this.txt_buscar);
