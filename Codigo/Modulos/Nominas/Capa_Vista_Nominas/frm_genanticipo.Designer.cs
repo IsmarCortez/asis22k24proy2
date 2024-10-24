@@ -29,19 +29,35 @@ namespace Capa_Vista_Nominas
         /// </summary>
         private void InitializeComponent()
         {
+            this.navegador1 = new Capa_Vista_Navegador.Navegador();
             this.SuspendLayout();
+            // 
+            // navegador1
+            // 
+            this.navegador1.BackColor = System.Drawing.Color.White;
+            this.navegador1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navegador1.Location = new System.Drawing.Point(0, 0);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(806, 366);
+            this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // frm_genanticipo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(806, 366);
+            this.Controls.Add(this.navegador1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_genanticipo";
             this.Text = "Generación Anticipo";
+            this.Load += new System.EventHandler(this.frm_genanticipo_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Capa_Vista_Navegador.Navegador navegador1;
     }
 }
