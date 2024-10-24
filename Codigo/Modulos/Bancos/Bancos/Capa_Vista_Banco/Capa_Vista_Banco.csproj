@@ -37,6 +37,9 @@
     <Reference Include="Capa_Vista_Navegador">
       <HintPath>..\..\..\..\Componentes\Navegador\Capa_Vista_Navegador\bin\Debug\Capa_Vista_Navegador.dll</HintPath>
     </Reference>
+    <Reference Include="Interfac_V3">
+      <HintPath>..\..\..\Menus\ModernGUI_V3\bin\Debug\Interfac_V3.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -49,6 +52,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_nav_movimientosBancarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nav_movimientosBancarios.Designer.cs">
+      <DependentUpon>frm_nav_movimientosBancarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_principal_bancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_principal_bancos.designer.cs">
+      <DependentUpon>frm_principal_bancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_nav_tipo_cambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_nav_tipo_cambio.Designer.cs">
+      <DependentUpon>frm_nav_tipo_cambio.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovimientoBancario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,12 +88,6 @@
     <Compile Include="polizaEncabezado.Designer.cs">
       <DependentUpon>polizaEncabezado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -87,6 +102,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frm_nav_movimientosBancarios.resx">
+      <DependentUpon>frm_nav_movimientosBancarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_nav_tipo_cambio.resx">
+      <DependentUpon>frm_nav_tipo_cambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_principal_bancos.resx">
+      <DependentUpon>frm_principal_bancos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MovimientoBancario.resx">
       <DependentUpon>MovimientoBancario.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="polizaEncabezado.resx">
       <DependentUpon>polizaEncabezado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

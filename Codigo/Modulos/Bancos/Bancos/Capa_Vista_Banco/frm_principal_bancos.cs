@@ -9,34 +9,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Capa_Vista_Logistica
+namespace Capa_Vista_Banco   
 {
-    public partial class FormPrincipal : Form
+    public partial class frm_principal_bancos : Form
     {
-        // Realizado por: Pedro Alejandro Citalán Herrera - 0901-20-16151
         string idUsuario;
-        public FormPrincipal(String idUsuario)
+        public frm_principal_bancos(String idUsuario)
         {
             InitializeComponent();
             ocultaSubMenu();
-
             this.idUsuario = idUsuario;
 
-            //Primera label
-            lbl_usuario2.Text = idUsuario;
-
-            //Segunda label
+            Lbl_b_usuario2.Text = idUsuario;
             DateTime fechaHoraActual = DateTime.Now;
-            lbl_fecha2.Text = fechaHoraActual.ToString();
-
-            lx = this.Location.X;
-            ly = this.Location.Y;
-            sw = this.Size.Width;
-            sh = this.Size.Height;
-            /*Btn_maximizar.Visible = false;
-             Btn_restaurar.Visible = true;*/
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            Lbl_b_hora2.Text = fechaHoraActual.ToString();
         }
         private void ocultaSubMenu() 
         {
@@ -169,8 +155,13 @@ namespace Capa_Vista_Logistica
 
         private void btnMenuCatalogosOpcion1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<TrasDProductos>();
+            AbrirFormulario<frm_nav_tipo_cambio>();
+            btnMenuCatalogosOpcion1.BackColor = Color.FromArgb(12, 61, 92);
             ocultaSubMenu();
+        }
+        private void btnMenuCatalogosOpcion2_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void btnMenuProcesos_Click(object sender, EventArgs e)
@@ -180,14 +171,16 @@ namespace Capa_Vista_Logistica
 
         private void btnMenuCatalogosOpcion2_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<Locales>();
+            AbrirFormulario<frm_nav_movimientosBancarios>();
+            btnMenuCatalogosOpcion1.BackColor = Color.FromArgb(12, 61, 92);
             ocultaSubMenu();
         }
 
         private void btnMenuProcesosOpcion1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Chofer>();
-            ocultaSubMenu();
+            /*AbrirFormulario<Form3>();
+            btnMenuCatalogosOpcion2.BackColor = Color.FromArgb(12, 61, 92);
+            ocultaSubMenu();*/
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -195,78 +188,10 @@ namespace Capa_Vista_Logistica
             this.Close();
         }
 
-        private void Btn_MenuCatalogosOpcion3_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<Almacenes>();
-            ocultaSubMenu();
-        }
 
-        private void Btn_MenuCatalogosOpcion4_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<MarcaNav>();
-            ocultaSubMenu();
         }
-
-        private void Btn_MenuCatalogosOpcion5_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<LineaNav>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuCatalogosOpcion6_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Movimientos>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuCatalogosOpcion7_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<MantenimientoNav>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Transporte>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion3_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Transporte_Vehiculos>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion4_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<TrasladoDProductos>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion5_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<MantenimientoVehiculos>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion6_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Movimiento_de_Inventario>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion7_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Locales>();
-            ocultaSubMenu();
-        }
-
-        private void Btn_MenuProcesosOpcion8_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<MonitoreoAlmacen>();
-            ocultaSubMenu();
-        }
-
         #endregion
         //Metodo para abrir formularios dentro de panel contenedor
         private void AbrirFormulario<MiForm>() where MiForm : Form, new() {
@@ -293,7 +218,7 @@ namespace Capa_Vista_Logistica
         }
         private void CloseForms(object sender,FormClosedEventArgs e) {
             if (Application.OpenForms["Form1"] == null)
-                Btn_MenuCatalogosOpcion1.BackColor = Color.FromArgb(4, 41, 68);            
+                btnMenuCatalogosOpcion1.BackColor = Color.FromArgb(4, 41, 68);            
         }
     }
 }

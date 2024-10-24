@@ -162,7 +162,7 @@ namespace Capa_Vista_Banco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(180)))), ((int)(((byte)(2)))));
             this.ClientSize = new System.Drawing.Size(800, 521);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
