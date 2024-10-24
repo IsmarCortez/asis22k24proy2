@@ -56,8 +56,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Contabilidad\Capa_Vista_Contabilidad\bin\Debug\Capa_Vista_Contabilidad.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Vista_Logistica, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Logistica\Capa_Vista_Logistica\bin\Debug\Capa_Vista_Logistica.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_Nominas">
       <HintPath>..\..\Nominas\Capa_Vista_Nominas\bin\Debug\Capa_Vista_Nominas.dll</HintPath>
+    </Reference>
+    <Reference Include="Capa_Vista_Produccion">
+      <HintPath>..\..\Produccion\Produccion\Capa_Vista_Produccion\bin\Debug\Capa_Vista_Produccion.dll</HintPath>
     </Reference>
     <Reference Include="Capa_Vista_Seguridad">
       <HintPath>..\..\..\Componentes\Seguridad\Capa_Vista_Seguridad\bin\Debug\Capa_Vista_Seguridad.dll</HintPath>

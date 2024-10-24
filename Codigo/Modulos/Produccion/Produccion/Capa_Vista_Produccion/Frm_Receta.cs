@@ -14,6 +14,7 @@ namespace Capa_Vista_Produccion
     {
         public Frm_Receta()
         {
+            string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
             InitializeComponent();
             string[] alias = { "ID", "Producto","Descripción", "Cantidad", "Costo", "Campo", "Tipo", "Estado" };
             navegador1.AsignarAlias(alias);

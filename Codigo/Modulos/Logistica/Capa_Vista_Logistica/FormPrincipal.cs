@@ -14,10 +14,29 @@ namespace Capa_Vista_Logistica
     public partial class FormPrincipal : Form
     {
         // Realizado por: Pedro Alejandro Citalán Herrera - 0901-20-16151
-        public FormPrincipal()
+        string idUsuario;
+        public FormPrincipal(String idUsuario)
         {
             InitializeComponent();
             ocultaSubMenu();
+
+            this.idUsuario = idUsuario;
+
+            //Primera label
+            lbl_usuario2.Text = idUsuario;
+
+            //Segunda label
+            DateTime fechaHoraActual = DateTime.Now;
+            lbl_fecha2.Text = fechaHoraActual.ToString();
+
+            lx = this.Location.X;
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            /*Btn_maximizar.Visible = false;
+             Btn_restaurar.Visible = true;*/
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
         private void ocultaSubMenu() 
         {
