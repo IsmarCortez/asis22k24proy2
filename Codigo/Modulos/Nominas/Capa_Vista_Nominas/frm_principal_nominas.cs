@@ -222,7 +222,7 @@ namespace Capa_Vista_Nominas
 
         private void Btn_horasextra_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frm_horasextra>(); // Pasa el idUsuario
+            AbrirFormulario<Capa_Vista_HorasExtras.frm_horasextra>(); // Pasa el idUsuario
             Btn_puesto.BackColor = Color.FromArgb(12, 61, 92);
             ocultaSubMenu();
         }

@@ -17,7 +17,7 @@ namespace Capa_Vista_Cuentas_Corrientes
             //Este bloque de codigo debe ir en todos los formularios de navegador
 
             InitializeComponent();
-            string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
+           string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
 
             string[] alias = { "id_clientes","Fk_id_vendedor","nombre_cliente","telefono_cliente","direccion_cliente","saldo_cuenta","estado" };
             navegador1.AsignarAlias(alias);

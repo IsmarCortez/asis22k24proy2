@@ -34,6 +34,9 @@
     <Reference Include="Capa_Controlador_Nominas">
       <HintPath>..\Capa_Controlador_Nominas\bin\Debug\Capa_Controlador_Nominas.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Vista_HorasExtras">
+      <HintPath>..\HorasExtras\Capa_Vista_HorasExtras\bin\Debug\Capa_Vista_HorasExtras.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_Navegador">
       <HintPath>..\..\..\Componentes\Navegador\Capa_Vista_Navegador\bin\Debug\Capa_Vista_Navegador.dll</HintPath>
     </Reference>

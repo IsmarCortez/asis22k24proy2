@@ -16,7 +16,7 @@ namespace Capa_Vista_Nominas
         {
             InitializeComponent();
 
-            string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
+           // string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
             /*********Prueba con la tabla inicial*********/
             string[] alias = { "pk_id_puestos", "nombre_puesto", "descripcion", "estado" };
             navegador1.AsignarAlias(alias);
@@ -25,7 +25,7 @@ namespace Capa_Vista_Nominas
             navegador1.AsignarColorFuente(Color.Black);
             navegador1.AsignarTabla("tbl_puestos_trabajo");
             navegador1.ObtenerIdAplicacion("1000");
-            navegador1.ObtenerIdUsuario(idUsuario);
+           // navegador1.ObtenerIdUsuario(idUsuario);
             navegador1.AsignarAyuda("1");
             navegador1.AsignarNombreForm("Puesto");
             /**********************************************/

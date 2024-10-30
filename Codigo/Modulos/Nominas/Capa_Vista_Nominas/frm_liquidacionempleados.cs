@@ -15,7 +15,7 @@ namespace Capa_Vista_Nominas
         public frm_liquidacionempleados()
         {
             InitializeComponent();
-            string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
+          //  string idUsuario = Interfac_V3.UsuarioSesion.GetIdUsuario();
 
             // ---------------------------------- Gabriela Suc ----------------------------------
             // Utilizando navegador
@@ -26,7 +26,7 @@ namespace Capa_Vista_Nominas
             navegador1.AsignarColorFuente(Color.Black);
             navegador1.AsignarTabla("tbl_liquidacion_trabajadores");
             navegador1.ObtenerIdAplicacion("1000");
-            navegador1.ObtenerIdUsuario(idUsuario);
+          //  navegador1.ObtenerIdUsuario(idUsuario);
             navegador1.AsignarAyuda("1");
             navegador1.AsignarNombreForm("Liquidación de empleados");
 

@@ -99,8 +99,13 @@ namespace Interfac_V3
 
         private void Btn_Compras_Click(object sender, EventArgs e)
         {
+
+           Frm_MDI_general_CompraVenta Cv = new Frm_MDI_general_CompraVenta(UsuarioSesion.GetIdUsuario());
+           Cv.Show();
+
             //Frm_MDI_general_CompraVenta Cv = new Frm_MDI_general_CompraVenta(UsuarioSesion.GetIdUsuario());
             //Cv.Show();
+
         }
 
         private void Btn_Bancos_Click(object sender, EventArgs e)

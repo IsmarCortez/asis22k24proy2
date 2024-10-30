@@ -77,13 +77,13 @@ namespace Capa_Vista_Seguridad
                             logica l = new logica();
                             l.funinsertarabitacora(Txt_usuario.Text.Trim(), "Se logeo al sistema", "Login", "1000");
 
-                            FormModulos formulario = new FormModulos(Txt_usuario.Text); // Asegúrate de que este es el nombre correcto de la clase                         
-                            formulario.Show();
+                           FormModulos formulario = new FormModulos(Txt_usuario.Text); // Asegúrate de que este es el nombre correcto de la clase                         
+                           formulario.Show();
                             
 
                             //Pasa el nombre de usuario al constructor de MDI_Seguridad
-                            //MDI_Seguridad formMDI = new MDI_Seguridad(Txt_usuario.Text);
-                            //formMDI.Show();
+                            MDI_Seguridad formMDI = new MDI_Seguridad(Txt_usuario.Text);
+                            formMDI.Show();
                         }
                         else
                         {
